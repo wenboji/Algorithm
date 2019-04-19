@@ -1,3 +1,5 @@
+package com.leetcode;
+
 import java.util.*;
 
 /**
@@ -33,25 +35,10 @@ public class Solution {
                 if (stack.isEmpty()) return false;
                 char topChar = mappings.get(c);
                 if (topChar != stack.pop()) return false;
-//                stack.pop();
             } else {
                 stack.push(c);
             }
-/*
-            // If the current character is a closing bracket.
-            if (this.mappings.containsKey(c)) {
 
-                // Get the top element of the stack. If the stack is empty, set a dummy value of '#'
-                char topElement = stack.empty() ? '#' : stack.pop();
-
-                // If the mapping for this bracket doesn't match the stack's top element, return false.
-                if (topElement != this.mappings.get(c)) {
-                    return false;
-                }
-            } else {
-                // If it was an opening bracket, push to the stack.
-                stack.push(c);
-            }*/
         }
 
         // If the stack still contains elements, then it is an invalid expression.
